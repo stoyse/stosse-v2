@@ -9,7 +9,7 @@ def Socket(recv, send):
     s.listen(1)
     while True:
         cli, addr = s.accept()
-        print(f'Connection established from: {addr}.')
+        print(f'Connection established from: ' + addr + '.')
         raw_data = cli.recv(5000)
         data = raw_data.decode('utf-8')
         Terminal(command=data)
